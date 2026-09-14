@@ -1,0 +1,23 @@
+export const products = [
+  { id:'01', name:'Morning Signal', description:'A bright botanical beginning for early starts and moving mornings.', accent:'#ffdf64', time:['Morning'], need:['Energy & Focus'], occasion:['Commute','Work & Study'], formulaEn:'Green mate, lemon, rosehip peel, ginger, green cardamom, black pepper, basil, rose petals, chamomile.', formulaCn:'绿色马黛茶、柠檬、野玫瑰果皮、生姜、绿豆蔻、黑胡椒、罗勒、玫瑰花瓣、洋甘菊。' },
+  { id:'02', name:'Daily Flow', description:'An earthy fruit-and-root ritual designed for the pace of an everyday morning.', accent:'#ffb187', time:['Morning','Midday'], need:['Digest & Ease','Daily Support'], occasion:['Commute','After Meal'], formulaEn:'Coix seed, cassia seed, poria, citrus peel, hawthorn.', formulaCn:'薏苡仁、决明子、茯苓、陈皮、山楂。' },
+  { id:'03', name:'Clear Focus', description:'A clean, mint-led green tea ritual for a clearer-feeling work block.', accent:'#80dafe', time:['Morning','Afternoon'], need:['Energy & Focus'], occasion:['Work & Study','Late Night'], formulaEn:'Green tea, spearmint, natural peppermint flavor.', formulaCn:'绿茶、绿薄荷、天然脆薄荷香料。' },
+  { id:'04', name:'Purple Reset', description:'A cooling violet pause centered on one visible Dendrobium flower.', accent:'#c7b8ff', badges:['ORGANIC'], time:['Afternoon','Evening'], need:['Hydrate & Glow','Calm & Balance'], occasion:['Afternoon Dip','Social & Sober'], formulaEn:'Dendrobium nobile flower, peppermint, lemongrass, monk fruit.', formulaCn:'金钗石斛花、薄荷、柠檬草、罗汉果。' },
+  { id:'05', name:'Peak Focus', description:'A crisp mate ritual for days that ask you to stay with the work.', accent:'#d7ff91', time:['Morning','Afternoon'], need:['Energy & Focus'], occasion:['Work & Study','Late Night','Commute'], formulaEn:'Green mate, lemon peel, peppermint, rosemary, basil.', formulaCn:'绿色马黛茶、柠檬皮、薄荷、迷迭香、罗勒。' },
+  { id:'06', name:'After Ease', description:'A warming spice ritual made for the natural pause after a meal.', accent:'#ff8b75', time:['Midday','Evening'], need:['Digest & Ease'], occasion:['After Meal'], formulaEn:'Cinnamon, licorice root, ginger, fennel, orange peel, cardamom.', formulaCn:'肉桂、甘草根、生姜、茴香、橙皮、小豆蔻。' },
+  { id:'07', name:'Berry Hydrate', description:'A jewel-toned fruit and flower infusion for a bright refill.', accent:'#ff86ba', time:['Morning','Afternoon'], need:['Hydrate & Glow','Daily Support'], occasion:['Commute','Move & Recover'], formulaEn:'Elderberry, raisin, hibiscus, blackberry, raspberry, sour cherry, blackcurrant, blueberry, natural flavor.', formulaCn:'接骨木果、葡萄干、玫瑰茄、黑莓、覆盆子、酸樱桃、黑醋栗、蓝莓、天然香料。' },
+  { id:'08', name:'Off Duty', description:'A caffeine-free citrus and floral ritual for changing the pace.', accent:'#efbae2', badges:['CAFFEINE FREE'], time:['Evening'], need:['Calm & Balance'], occasion:['Social & Sober','Wind Down'], formulaEn:'Rooibos, eucalyptus leaf, orange peel, orange blossom, natural flavor.', formulaCn:'路易博士茶、桉树叶、橙皮、橙花、天然香料。' },
+  { id:'09', name:'Golden Settle', description:'A golden root-and-spice infusion for slower moments around food.', accent:'#f4bd4a', time:['Midday','Evening'], need:['Digest & Ease','Calm & Balance'], occasion:['After Meal','Move & Recover'], formulaEn:'Ginger root, green cardamom, coriander, turmeric root, clove, nutmeg.', formulaCn:'姜根、绿豆蔻、芫荽、姜黄根、丁香、肉豆蔻。' },
+  { id:'10', name:'Social Bloom', description:'A floral, alcohol-free pour made to look at home in a beautiful glass.', accent:'#8de0df', time:['Afternoon','Evening'], need:['Calm & Balance'], occasion:['Social & Sober'], formulaEn:'Semi-fermented tea, moringa leaf, rosebud, blue mallow, freeze-dried pomegranate arils, pink cornflower.', formulaCn:'半发酵茶、辣木叶、玫瑰花蕾、蓝色锦葵花、冻干石榴假种皮、粉色矢车菊。' },
+  { id:'11', name:'Quiet Garden', description:'A soft floral cup for the ritual of putting the day down.', accent:'#b9e39a', badges:['ORGANIC'], time:['Evening'], need:['Calm & Balance','Sleep & Rest'], occasion:['Wind Down'], formulaEn:'Chamomile, lily, rose petals, lemon verbena, blackberry leaf.', formulaCn:'洋甘菊、百合、玫瑰花瓣、柠檬马鞭草、黑莓叶。' },
+  { id:'12', name:'Night Bloom', description:'A deep blue caffeine-free botanical ritual for the final hours of the day.', accent:'#7d85dc', badges:['CAFFEINE FREE','ORGANIC'], time:['Evening'], need:['Sleep & Rest'], occasion:['Wind Down'], formulaEn:'Rooibos, chamomile, marigold, blue mallow, natural flavor.', formulaCn:'路易博士茶、洋甘菊、万寿菊、蓝锦葵、天然香料。' },
+];
+
+export function selectFilter(_current, group, value) {
+  return group && value ? { group, value } : null;
+}
+
+export function filterProducts(items, selected) {
+  if (!selected) return items;
+  return items.filter((product) => product[selected.group]?.includes(selected.value));
+}

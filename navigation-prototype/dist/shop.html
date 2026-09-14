@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find a botanical ritual for your time, need or occasion.">
+  <title>Find Your Ritual — BRAND NAME</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="badges.css">
+</head>
+<body class="shop-page">
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER $60 / PROTOTYPE</div>
+  <header class="site-header">
+    <button class="menu-button" data-drawer-open aria-controls="ritualDrawer" aria-expanded="false">☰ <span>FILTER</span></button>
+    <a class="wordmark" href="index.html"><b>V</b> BRAND NAME</a>
+    <div class="header-actions"><a href="shop.html">SHOP ALL</a><span>BAG (0)</span></div>
+  </header>
+
+  <aside class="ritual-drawer shop-drawer" id="ritualDrawer" aria-hidden="true">
+    <div class="drawer-top"><div><p class="eyebrow">PRODUCT FINDER</p><h2>Find your<br>daily ritual.</h2></div><button class="close-button" data-drawer-close aria-label="Close filters">×</button></div>
+    <button class="shop-all-link button-link" data-clear-filter>SHOP ALL RITUALS <span>↗</span></button>
+    <nav class="drawer-filters" aria-label="Filter products">
+      <section class="filter-section" data-group="time"><button class="filter-title" aria-expanded="true">BY TIME <span>−</span></button><div class="filter-options">
+        <button data-filter="Morning">Morning</button><button data-filter="Midday">Midday</button><button data-filter="Afternoon">Afternoon</button><button data-filter="Evening">Evening</button>
+      </div></section>
+      <section class="filter-section" data-group="need"><button class="filter-title" aria-expanded="false">BY NEED <span>+</span></button><div class="filter-options" hidden>
+        <button data-filter="Energy &amp; Focus">Energy &amp; Focus</button><button data-filter="Digest &amp; Ease">Digest &amp; Ease</button><button data-filter="Hydrate &amp; Glow">Hydrate &amp; Glow</button><button data-filter="Calm &amp; Balance">Calm &amp; Balance</button><button data-filter="Sleep &amp; Rest">Sleep &amp; Rest</button><button data-filter="Daily Support">Daily Support</button>
+      </div></section>
+      <section class="filter-section" data-group="occasion"><button class="filter-title" aria-expanded="false">BY OCCASION <span>+</span></button><div class="filter-options" hidden>
+        <button data-filter="Commute">Commute</button><button data-filter="Work &amp; Study">Work &amp; Study</button><button data-filter="After Meal">After Meal</button><button data-filter="Afternoon Dip">Afternoon Dip</button><button data-filter="Move &amp; Recover">Move &amp; Recover</button><button data-filter="Social &amp; Sober">Social &amp; Sober</button><button data-filter="Late Night">Late Night</button><button data-filter="Wind Down">Wind Down</button>
+      </div></section>
+    </nav>
+    <div class="drawer-links">ABOUT<br>INGREDIENTS<br>JOURNAL<br>SHIPPING POLICY<br>FAQ</div>
+  </aside>
+  <div class="scrim" data-drawer-close></div>
+
+  <main class="shop-main">
+    <button class="back-button" data-back>← BACK</button>
+    <section class="shop-intro">
+      <div><p class="eyebrow">THE RITUAL SHOP</p><h1>Find Your Ritual</h1></div>
+      <p>Choose one way to shop. Every new selection replaces the last, so the path stays simple.</p>
+    </section>
+    <div class="shop-toolbar"><button class="filter-trigger" data-drawer-open>FILTER RITUALS <span>↗</span></button><div><span id="activeFilter">All Rituals</span><small id="resultCount">12 PRODUCTS</small></div></div>
+    <section class="product-grid" id="productGrid" aria-live="polite"></section>
+  </main>
+
+  <footer><a class="wordmark" href="index.html"><b>V</b> BRAND NAME</a><span>BOTANICAL DAILY SUPPORT</span><span>ABOUT　 SHOP　 INGREDIENTS　 SHIPPING POLICY</span></footer>
+  <template id="productTemplate">
+    <article class="product-card">
+      <div class="product-art"><span class="product-number"></span><div class="product-badges"></div><strong></strong><i>+</i></div>
+      <div class="product-copy"><small></small><h2></h2><p class="product-description"></p><div class="formula"><b>COMPLETE BASE FORMULA / 完整基础配方</b><p class="formula-en"></p><p class="formula-cn"></p><span>Functional Ingredient / 功能性原料</span></div><div class="product-bottom"><div class="product-tags"></div><button>QUICK VIEW　↗</button></div></div>
+    </article>
+  </template>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

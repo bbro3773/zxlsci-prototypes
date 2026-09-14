@@ -1,0 +1,20 @@
+.product-badges {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.product-badges span {
+  padding: 7px 9px;
+  background: var(--paper);
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  box-shadow: 2px 2px 0 rgba(23, 23, 23, .12);
+}
